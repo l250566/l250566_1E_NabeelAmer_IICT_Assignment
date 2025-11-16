@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDrone: Monitoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <input type="checkbox" id="nav-toggle" class="hidden-input">
+
+    <header class="site-header">
+        <div class="logo">EcoDrone</div>
+        <nav role="navigation">
+            <label for="nav-toggle" class="menu-button" aria-controls="main-nav">Menu</label>
+            <ul id="main-nav" role="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#enroll">Enroll</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="grid-layout">
+        <section id="hero" class="hero-area">
+            <h1>Monitor Tomorrow, Today.</h1>
+            <p>Non-invasive aerial data for environmental integrity.</p>
+        </section>
+
+        <section id="about" class="content-area">
+            <article>
+                <h2>Our Mission</h2>
+                <p>EcoDrone delivers precise data on forest health, coastal erosion, and wildlife populations using
+                    custom-built
+                    drones. We adhere strictly to ethical monitoring practices.</p>
+            </article>
+        </section>
+
+        <section id="services" class="content-area tabs-component">
+            <h2>Core Services</h2>
+            <div class="tabs-container">
+                <input type="radio" name="service-tab" id="tab-forest" checked class="hidden-input">
+                <input type="radio" name="service-tab" id="tab-coastal" class="hidden-input">
+
+                <div class="tab-labels">
+                    <label for="tab-forest">Forestry</label>
+                    <label for="tab-coastal">Coastal</label>
+                </div>
+
+                <div class="tab-content">
+                    <div id="content-forest" class="tab-pane">
+                        <p>Detailed analysis of tree density and canopy health.</p>
+                    </div>
+                    <div id="content-coastal" class="tab-pane">
+                        <p>Tracking of water quality and shoreline changes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="enroll" class="form-area">
+            <article>
+                <h2>Enrollment & Consultation</h2>
+                <form action="#" method="POST" class="smart-form">
+
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <fieldset class="form-fieldset">
+                        <legend>Select Your Plan Type (Radio Buttons)</legend>
+                        <div class="input-group">
+                            <input type="radio" id="plan-basic" name="plan" value="basic" required>
+                            <label for="plan-basic">Basic Survey</label>
+
+                            <input type="radio" id="plan-full" name="plan" value="full">
+                            <label for="plan-full">Full Data Suite</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend>Areas of Interest (Checkboxes)</legend>
+                        <div class="input-group">
+                            <input type="checkbox" id="check-a" name="interest[]" value="a">
+                            <label for="check-a">Pollution</label>
+
+                            <input type="checkbox" id="check-b" name="interest[]" value="b">
+                            <label for="check-b">Reforestation</label>
+
+                            <input type="checkbox" id="check-c" name="interest[]" value="c">
+                            <label for="check-c">Erosion</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="region">Target Region</label>
+                        <select id="region" name="region">
+                            <option value="">-- Select a Region --</option>
+                            <option value="na">North America</option>
+                            <option value="eu">Europe</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Project Details</label>
+                        <textarea id="details"
